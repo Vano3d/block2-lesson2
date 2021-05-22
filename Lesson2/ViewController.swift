@@ -54,6 +54,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var hexColor: UILabel!
     
+    @IBOutlet weak var copyButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +64,11 @@ class ViewController: UIViewController {
         viewColor.layer.masksToBounds = true
         
         viewColor.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: CGFloat(sliderOpacity.value))
+        
+        copyButton.layer.borderWidth = 1
+        copyButton.layer.borderColor = UIColor.white.cgColor
+        copyButton.layer.cornerRadius = 10
+        
         
     }
 
@@ -75,6 +83,15 @@ class ViewController: UIViewController {
         
         hexColor.text = bgColor.toHexString()
         
+    }
+    @IBAction func tappedCopyButton(_ sender: Any) {
+        UIPasteboard.general.string = hexColor.text
+        let alert = UIAlertController(title: "Hex Code \(hexColor.text ?? " ") copied", message: "Opacity is not considered", preferredStyle: .alert)
+         
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+         
+        self.present(alert, animated: true)
     }
     
 }

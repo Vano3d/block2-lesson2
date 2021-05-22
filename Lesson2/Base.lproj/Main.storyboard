@@ -183,7 +183,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexColor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPj-bz-JB9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexColor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="zPj-bz-JB9">
                                 <rect key="frame" x="147" y="514" width="120" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="O6n-LV-P65"/>
@@ -192,6 +192,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VT0-ml-J3q">
+                                <rect key="frame" x="162" y="556" width="90" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3xc-Sz-SwP"/>
+                                    <constraint firstAttribute="width" constant="90" id="cGJ-Hg-YCp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Copy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedCopyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FUU-FV-4Aw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.38123170388767313" green="0.55972301028845095" blue="0.60366217656569043" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -206,9 +220,11 @@
                             <constraint firstItem="Qrd-25-cuv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NJA-Up-mcN"/>
                             <constraint firstItem="Wg5-mo-V7d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nfp-qT-oJV"/>
                             <constraint firstItem="8J9-7S-SOi" firstAttribute="top" secondItem="Qrd-25-cuv" secondAttribute="bottom" constant="30" id="PuY-1Z-x2O"/>
+                            <constraint firstItem="VT0-ml-J3q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNY-ng-gxD"/>
                             <constraint firstItem="Qrd-25-cuv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fTV-0W-b6w"/>
                             <constraint firstItem="Qrd-25-cuv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="mag-aL-B7Z"/>
                             <constraint firstItem="Wg5-mo-V7d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="owH-5V-0hU"/>
+                            <constraint firstItem="VT0-ml-J3q" firstAttribute="top" secondItem="zPj-bz-JB9" secondAttribute="bottom" constant="12" id="ps6-xr-Pgm"/>
                             <constraint firstItem="8J9-7S-SOi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qag-yZ-wch"/>
                         </constraints>
                         <variation key="default">
@@ -233,6 +249,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="copyButton" destination="VT0-ml-J3q" id="l1T-qe-g68"/>
                         <outlet property="hexColor" destination="zPj-bz-JB9" id="BYL-kx-hir"/>
                         <outlet property="sliderBlue" destination="J1R-Bm-9Ja" id="nvV-mK-la1"/>
                         <outlet property="sliderGreen" destination="VhT-wY-tRU" id="BDl-fY-z0u"/>
