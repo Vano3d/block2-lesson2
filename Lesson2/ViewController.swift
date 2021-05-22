@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         
         viewColor.layer.cornerRadius = 20
         viewColor.layer.masksToBounds = true
-        
         viewColor.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: CGFloat(sliderOpacity.value))
         
     }
