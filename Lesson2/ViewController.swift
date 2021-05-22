@@ -68,8 +68,7 @@ class ViewController: UIViewController {
         copyButton.layer.borderWidth = 1
         copyButton.layer.borderColor = UIColor.white.cgColor
         copyButton.layer.cornerRadius = 10
-        
-        
+        copyButton.isHidden = true
     }
 
     @IBAction func movingSliderRed() {
@@ -83,10 +82,12 @@ class ViewController: UIViewController {
         
         hexColor.text = bgColor.toHexString()
         
+        copyButton.isHidden = false
+        
     }
     @IBAction func tappedCopyButton(_ sender: Any) {
         UIPasteboard.general.string = hexColor.text
-        let alert = UIAlertController(title: "Hex Code \(hexColor.text ?? " ") copied", message: "Opacity is not considered", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Hex code \(hexColor.text ?? " ") copied", message: "Opacity is not considered", preferredStyle: .alert)
          
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
