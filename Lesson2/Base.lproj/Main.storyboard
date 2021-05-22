@@ -183,12 +183,20 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hexColor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPj-bz-JB9">
+                                <rect key="frame" x="159" y="514" width="96.5" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.38123170388767313" green="0.55972301028845095" blue="0.60366217656569043" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Qrd-25-cuv" firstAttribute="top" secondItem="Wg5-mo-V7d" secondAttribute="bottom" constant="20" id="10c-gF-22W"/>
+                            <constraint firstItem="zPj-bz-JB9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ml-6B-OWa"/>
                             <constraint firstItem="8J9-7S-SOi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1z0-cq-yAa"/>
+                            <constraint firstItem="zPj-bz-JB9" firstAttribute="top" secondItem="8J9-7S-SOi" secondAttribute="bottom" constant="32" id="8hW-U7-Cgd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8J9-7S-SOi" secondAttribute="trailing" constant="30" id="Gsr-wm-PaH">
                                 <variation key="heightClass=compact" constant="15"/>
                             </constraint>
