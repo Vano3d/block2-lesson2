@@ -27,6 +27,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var copyButton: UIButton!
     
+    func myMessage(messTitle: String, messMessage: String, messBtnTitle: String) {
+        let alert = UIAlertController(title: messTitle, message: messMessage, preferredStyle: .alert)
+         
+        alert.addAction(UIAlertAction(title: messBtnTitle, style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +62,10 @@ class ViewController: UIViewController {
         copyButton.isHidden = false
         
     }
+    
     @IBAction func tappedCopyButton(_ sender: Any) {
         UIPasteboard.general.string = hexColor.text
-        let alert = UIAlertController(title: "Hex code \(hexColor.text ?? " ") copied", message: "Opacity is not considered", preferredStyle: .alert)
-         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-         
-        self.present(alert, animated: true)
+        myMessage(messTitle: "Hex code copied", messMessage: "without opacity value", messBtnTitle: "OK")
     }
     
 }
-
